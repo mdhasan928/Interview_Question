@@ -21,7 +21,7 @@ public class Problem1
 {
 	public static void main(String[] args) 
 	{
-		int[] arr= {3,5,5,6,8,9,1};
+		int[] arr= {3,5,6,8,9,1};
 		int target=13;
 		int[] output=twoSum(arr,target);
 		
