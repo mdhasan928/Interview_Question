@@ -33,6 +33,7 @@ public class Problem49 {
 		String[] strs= {"cat","top","tac","pot","atc","mog"};
 		List<List<String>> result=p49.groupAnagrams(strs);
 		System.out.print("[ ");
+		/*
 		for(int i=0;i<result.size();i++) 
 		{   System.out.print("[");
 			for(int j=0;j<result.get(i).size();j++)
@@ -40,6 +41,11 @@ public class Problem49 {
 				System.out.print(" "+result.get(i).get(j));
 			}
 			System.out.print("]");
+		}
+		*/
+		for(int i=0;i<result.size();i++)
+		{
+			System.out.print(result.get(i)+",");
 		}
 		System.out.print(" ]");
 		
