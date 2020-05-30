@@ -35,11 +35,11 @@ public class Problem7
 			return 0;
 		}
 		
-		if(num>Integer.MAX_VALUE/10|| num==Integer.MAX_VALUE/10&& digit>7)
+		if(num>Integer.MAX_VALUE/10 || num==Integer.MAX_VALUE/10&& digit>7)
 		{
 			return 0;
 		}
-		if(num<Integer.MIN_VALUE/10|| num==Integer.MIN_VALUE/10&&digit<-8) 
+		if(num<Integer.MIN_VALUE/10 || num==Integer.MIN_VALUE/10&&digit<-8) 
 		{
 			return 0;
 		}
