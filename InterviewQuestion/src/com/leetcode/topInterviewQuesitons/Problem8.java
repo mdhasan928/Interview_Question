@@ -46,7 +46,7 @@ public class Problem8
 {
 	public static void main(String[] arg)
 	{
-		String s="   -70 72  d	rhp";
+		String s="   -7072  d	rhp";
 		System.out.println(myAtoi(s));
 	}
 	public static int myAtoi(String s)
