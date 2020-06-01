@@ -27,7 +27,7 @@ public class Problem3
 {
 	public static void main(String[] args)
 	{
-		String s="abbcabcbb";
+		String s="abbccabdcbb";
 		System.out.println(longestSubstrig(s));
 	}
 	public static int longestSubstrig(String s)
@@ -40,6 +40,7 @@ public class Problem3
 		Set<Character> set=new HashSet<>();
 		int length=0;
 		int left=0, right=0;
+		int start=0, end=0;
 		
 		while(right<s.length())
 		{
@@ -53,10 +54,19 @@ public class Problem3
 			{
 				set.add(s.charAt(right));
 				right++;
+				
+				if(length<set.size())
+				{
+					start=left;
+					end=left+set.size();
+					
+				}
+				
 				length=Math.max(length, set.size());
 				
 			}
 		}
+		System.out.println(s.substring(start,end));
 		return length;
 	}
 
