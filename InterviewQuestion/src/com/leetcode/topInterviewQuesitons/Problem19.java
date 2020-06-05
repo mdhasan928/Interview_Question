@@ -29,8 +29,8 @@ public class Problem19
 		l2.next=l3;
 		l3.next=l4;
 		l4.next=l5;
-		//LNode result=removeNthFromStart(l1,4);
-		LNode result=removeNthFromEnd(l1,4);
+		LNode result=removeNthFromStart(l1,4);
+		//LNode result=removeNthFromEnd(l1,4);
 		while(result!=null)
 		{
 			System.out.print(" "+result.val);
