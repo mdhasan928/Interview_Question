@@ -29,7 +29,8 @@ public class Problem19
 		l2.next=l3;
 		l3.next=l4;
 		l4.next=l5;
-		LNode result=removeNthFromEnd(l1,3);
+		//LNode result=removeNthFromStart(l1,4);
+		LNode result=removeNthFromEnd(l1,4);
 		while(result!=null)
 		{
 			System.out.print(" "+result.val);
@@ -55,6 +56,22 @@ public class Problem19
 			fast=fast.next;
 		}
 		slow.next=slow.next.next;
+		
+		return dummy_head.next;
+	}
+	public static LNode removeNthFromStart(LNode head, int n)
+	{
+		LNode dummy_head=new LNode(0);
+		dummy_head.next=head;
+		
+		LNode fast=dummy_head;
+		
+		for(int i=1; i<n;i++)
+		{
+			fast=fast.next;
+		}
+		
+		fast.next=fast.next.next;
 		
 		return dummy_head.next;
 	}
