@@ -47,15 +47,12 @@ public class Problem26
 	}
 	public static int removeDuplicates(int[]arr)
 	{
-		int length=0;
 		int index=1;
 		for(int i=1;i<arr.length;i++)
 		{
 			if(arr[i-1]!=arr[i])
 			{
-				//int temp=arr[i];
 				arr[index++]=arr[i];
-				//arr[i-1]=temp;
 				
 			}
 			
