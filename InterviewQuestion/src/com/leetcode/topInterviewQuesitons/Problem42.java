@@ -17,6 +17,8 @@ public class Problem42
 		int[] arr= {0,1,0,2,1,0,1,3,2,1,2,};
 		System.out.println(trapWater(arr));
 	}
+	
+	
 	public static int trapWater(int[] arr)
 	{
 		if(arr.length==0||arr==null)
