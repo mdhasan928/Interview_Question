@@ -36,6 +36,7 @@ public class Problem33
 		}
 		int left=0;
 		int right=arr.length-1;
+		
 		while(left<right)
 		{
 			int mid= left+(right-left)/2;
@@ -52,6 +53,7 @@ public class Problem33
 		int start=left;
 		left=0;
 		right=arr.length-1;
+		
 		if(target>=arr[start]&& target<=arr[right])
 		{
 			left=start;
