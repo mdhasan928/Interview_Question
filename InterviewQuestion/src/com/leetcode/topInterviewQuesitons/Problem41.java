@@ -18,7 +18,7 @@ import java.util.Arrays;
 public class Problem41 {
 	
 	public static void main(String[] args) {
-		int[] num= {2,-1,1,3,8,-4,8,9,7,2,0,12,15};
+		int[] num= {};//{2,-1,1,3,8,-4,8,9,7,2,0,12,15};
 		//int[] num= {1,2,3};
 		int n=missingNumber(num);
 			System.out.println("Missing minimum positive number: " +n);
