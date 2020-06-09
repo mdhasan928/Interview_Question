@@ -21,8 +21,8 @@ public class Problem50
 	public static void main(String[] args)
 	{
 		double x=2;
-		int n=8;
-		System.out.println("Result="+myPower(x,n));
+		int n=7;
+		System.out.println(myPower(x,n));
 	}
 	public static double myPower(double x, int n)
 	{
