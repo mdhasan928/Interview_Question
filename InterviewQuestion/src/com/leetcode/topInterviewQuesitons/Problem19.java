@@ -1,4 +1,8 @@
 package com.leetcode.topInterviewQuesitons;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /*
  * Given a linked list, remove the n-th node from the end of list and return its head.
 
@@ -29,8 +33,10 @@ public class Problem19
 		l2.next=l3;
 		l3.next=l4;
 		l4.next=l5;
-		LNode result=removeNthFromStart(l1,4);
+		//LNode result=removeNthFromStart(l1,4);
 		//LNode result=removeNthFromEnd(l1,4);
+		//LNode result=removeNthFromEndNi(l1,3);
+		LNode result=removeNthFromEndCounter(l1,3);
 		while(result!=null)
 		{
 			System.out.print(" "+result.val);
@@ -59,6 +65,7 @@ public class Problem19
 		
 		return dummy_head.next;
 	}
+	
 	public static LNode removeNthFromStart(LNode head, int n)
 	{
 		LNode dummy_head=new LNode(0);
@@ -75,7 +82,48 @@ public class Problem19
 		
 		return dummy_head.next;
 	}
-
+	
+	public static LNode removeNthFromEndNi(LNode l1, int n) {
+        LNode listNode = l1;
+       List<LNode> list = new ArrayList<>();
+       while(listNode.next != null){
+           list.add(listNode);
+           listNode = listNode.next;
+       }
+       list.add(listNode);
+       
+       if(list.size() == 1)
+           return null;
+       if(list.size() == n)
+           return l1.next;
+       list.get(list.size()-n-1).next = list.get(list.size()-n).next;
+       return l1;
+       
+   }
+ 
+	public static LNode removeNthFromEndCounter(LNode head, int n)
+	{
+		LNode dummy_head=new LNode(0);
+		dummy_head.next=head;
+		
+		LNode pointer=dummy_head;
+		LNode pointer1=dummy_head;
+		int counter=0;
+		while(pointer!=null)
+		{
+			counter++;
+			pointer=pointer.next;
+		}
+		for(int i=1; i<counter-n;i++)
+		{
+			pointer1=pointer1.next;
+		}
+		
+		pointer1.next=pointer1.next.next;
+		
+		return dummy_head.next;
+	}
+	
 }
 
 
