@@ -33,10 +33,12 @@ public class Problem62
 {
 	public static void main(String[] args)
 	{
-		int m=8;
-		int n=11;
+		int m=3;
+		int n=7;
 		System.out.println(uniquePaths(m,n));
 	}
+	
+	//dynamic programming (consider small part to solve big)
 	
 	public static int uniquePaths(int m, int n)
 	{
