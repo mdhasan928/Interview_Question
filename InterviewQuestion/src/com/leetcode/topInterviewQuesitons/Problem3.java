@@ -66,7 +66,7 @@ public class Problem3
 				
 			}
 		}
-		System.out.println(s.substring(start,end));
+		System.out.println(s.substring(start,start+length));
 		return length;
 	}
 
