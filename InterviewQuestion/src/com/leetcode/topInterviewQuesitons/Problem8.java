@@ -92,8 +92,7 @@ public class Problem8
 				return Integer.MIN_VALUE;
 			}
 			*/
-			if(!isNegative&&num>(Integer.MAX_VALUE-digit)/10) return Integer.MAX_VALUE;
-			else if(isNegative&&-num<(Integer.MIN_VALUE+digit)/10) return Integer.MIN_VALUE;
+
 			num=num*10+digit;
 		}
 		 if(isNegative)
