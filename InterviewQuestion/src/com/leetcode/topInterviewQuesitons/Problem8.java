@@ -46,7 +46,7 @@ public class Problem8
 {
 	public static void main(String[] arg)
 	{
-		String s="   -7072  d	rhp";
+		String s="-2147483648";
 		System.out.println(myAtoi(s));
 	}
 	public static int myAtoi(String s)
@@ -82,21 +82,24 @@ public class Problem8
 				break;
 			}
 			digit=(int)(s.charAt(i)-'0');
-			
+			/*
 			if(!isNegative&&num>Integer.MAX_VALUE/10||num==Integer.MAX_VALUE/10&&digit>7)
 			{
 				return Integer.MAX_VALUE;
 			}
-			if(isNegative&&num<Integer.MIN_VALUE/10||num==Integer.MIN_VALUE/10&&digit<-8)
+			if(isNegative&&-num<Integer.MIN_VALUE/10||-num==Integer.MIN_VALUE/10&&digit<-8)
 			{
 				return Integer.MIN_VALUE;
 			}
+			*/
+			if(!isNegative&&num>(Integer.MAX_VALUE-digit)/10) return Integer.MAX_VALUE;
+			else if(isNegative&&-num<(Integer.MIN_VALUE+digit)/10) return Integer.MIN_VALUE;
 			num=num*10+digit;
 		}
-		if(isNegative)
-		{
-			num=-num;
-		}
+		 if(isNegative)
+	        {
+	            num=-num;
+	        }
 		
 		return num;
 	}
