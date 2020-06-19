@@ -36,7 +36,7 @@ public class Problem20
 {
 	public static void main(String[] args)
 	{
-		String s= "{[]}([()])";
+		String s= "([] {}(()))";
 		System.out.println(isValidParen(s));
 	}
 	public static boolean isValidParen(String s)
@@ -46,6 +46,7 @@ public class Problem20
 			return false;
 		}
 		Stack<Character> stack= new Stack<>();
+		
 		for(int i=0;i<s.length();i++)
 		{
 			char ch=s.charAt(i);
@@ -55,8 +56,10 @@ public class Problem20
 			}
 			if((ch==')'&& stack.peek()=='(')||(ch=='}'&& stack.peek()=='{')||(ch==']'&& stack.peek()=='[')) 
 			{
-				stack.pop();
+				System.out.println(stack.pop());
 			}
+			
+			
 			/*else if(ch=='}'&& stack.peek()=='{')
 			{
 				stack.pop();
