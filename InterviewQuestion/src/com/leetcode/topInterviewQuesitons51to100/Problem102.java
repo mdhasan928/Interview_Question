@@ -26,6 +26,29 @@ return its level order traversal as:
 public class Problem102 
 {
 	
+	public static void main(String[] args)
+	{
+		//Integer[] binaryTree= {3,9,20,null,null,15,7};
+		
+		TreeNode root=new TreeNode(3);
+		root.left=new TreeNode(9);
+		root.right=new TreeNode(20);
+		
+		root.right.left=new TreeNode(15);
+		root.right.right=new TreeNode(7);
+		root.left.left=new TreeNode(5);
+		root.left.right=new TreeNode(8);
+		
+		List<List<Integer>> result=leveOrder(root);
+		//System.out.println(result);
+		
+		for(List<Integer> num: result)
+		{
+			System.out.println(num);
+		}
+		
+	}
+	
 	public static List<List<Integer>> leveOrder(TreeNode root)
 	{
 		List<List<Integer>> result =new ArrayList<>();
@@ -35,6 +58,7 @@ public class Problem102
 		}
 		Queue<TreeNode> que=new LinkedList<>();
 		que.offer(root);
+		
 		while(!que.isEmpty())
 		{
 			int queSize=que.size();
